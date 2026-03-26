@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Manthan OS</title>
+
   <style>
     body {
       margin: 0;
@@ -12,26 +13,32 @@
       color: #ffffff;
       line-height: 1.6;
     }
+
     .container {
       max-width: 900px;
       margin: auto;
       padding: 60px 20px;
     }
+
     h1 {
       font-size: 48px;
       line-height: 1.2;
       margin-bottom: 20px;
     }
+
     h2 {
       margin-top: 60px;
       font-size: 28px;
     }
+
     p {
       color: #cfcfcf;
     }
+
     .hero p {
       font-size: 18px;
     }
+
     .btn {
       display: inline-block;
       margin-top: 20px;
@@ -43,11 +50,13 @@
       border-radius: 6px;
       margin-right: 10px;
     }
+
     .btn.secondary {
       background: transparent;
       color: #fff;
       border: 1px solid #444;
     }
+
     .code {
       background: #111;
       padding: 15px;
@@ -56,11 +65,19 @@
       margin-top: 15px;
       color: #9ef;
     }
+
     .section {
       margin-top: 40px;
     }
+
+    .footer {
+      margin-top: 80px;
+      opacity: 0.6;
+      font-size: 14px;
+    }
   </style>
 </head>
+
 <body>
 
   <div class="container">
@@ -68,24 +85,33 @@
     <!-- HERO -->
     <div class="hero">
       <h1>Block bad pull requests.<br/>Automatically.</h1>
+
       <p>
         Manthan OS evaluates pull requests against defined rules and prevents merges when those rules fail.
       </p>
+
       <p><strong>Deterministic. Enforceable. Auditable.</strong></p>
 
-      <a class="btn" href="#">Install on GitHub</a>
-      <a class="btn secondary" href="./docs/getting-started.md">View Docs</a>
+      <a class="btn" href="https://github.com/marketplace" target="_blank">
+        Install on GitHub
+      </a>
+
+      <a class="btn secondary" href="https://github.com/dip-protocol/manthan-os#readme" target="_blank">
+        View Docs
+      </a>
     </div>
 
     <!-- PROBLEM -->
     <div class="section">
       <h2>Pull request checks are not enough</h2>
+
       <p>
         Most tools run checks and show results. They rely on humans to enforce decisions.
-        This leads to inconsistency and missed issues.
+        This leads to inconsistency, missed issues, and broken standards.
       </p>
 
       <h2>Manthan OS enforces decisions</h2>
+
       <p>
         Every pull request is evaluated using rules. Failures automatically block merges.
         No ambiguity. No drift.
@@ -95,6 +121,7 @@
     <!-- EXAMPLE -->
     <div class="section">
       <h2>Example</h2>
+
       <p><strong>Rule:</strong> PR must include test updates</p>
       <p><strong>Pull Request:</strong> src/api.js changed, no tests</p>
       <p><strong>Result:</strong> FAIL</p>
@@ -105,9 +132,11 @@
     <!-- HOW IT WORKS -->
     <div class="section">
       <h2>How it works</h2>
+
       <div class="code">
         Pull Request -> Webhook -> Manthan -> Decision -> Status Check -> Blocked / Allowed
       </div>
+
       <p>
         Manthan evaluates pull requests using contracts and enforces results via GitHub status checks.
       </p>
@@ -116,6 +145,7 @@
     <!-- CONTRACT -->
     <div class="section">
       <h2>Define rules as contracts</h2>
+
       <div class="code">
 {
   "name": "require-tests",
@@ -128,6 +158,7 @@
     <!-- FEATURES -->
     <div class="section">
       <h2>Features</h2>
+
       <p><strong>Deterministic decisions:</strong> Same input -> same output</p>
       <p><strong>Merge enforcement:</strong> Failures block merges</p>
       <p><strong>Contract-based rules:</strong> Define once, apply everywhere</p>
@@ -137,6 +168,7 @@
     <!-- SECURITY -->
     <div class="section">
       <h2>Built for trust</h2>
+
       <p>GitHub App authentication (JWT)</p>
       <p>No storage of repository data</p>
       <p>HTTPS-only communication</p>
@@ -145,12 +177,15 @@
     <!-- CTA -->
     <div class="section">
       <h2>Get started</h2>
-      <a class="btn" href="#">Install on GitHub</a>
+
+      <a class="btn" href="https://github.com/marketplace" target="_blank">
+        Install on GitHub
+      </a>
     </div>
 
     <!-- FOOTER -->
-    <div class="section">
-      <p style="opacity:0.6;">
+    <div class="footer">
+      <p>
         Manthan OS — Decisions should not be suggestions. They should be enforced.
       </p>
     </div>
