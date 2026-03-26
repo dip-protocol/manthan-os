@@ -87,9 +87,8 @@
       color: #fff;
     }
 
-    /* 🔥 RESPONSIVE FIX */
+    /* Responsive */
     @media (max-width: 600px) {
-
       .container {
         padding: 40px 16px;
       }
@@ -123,10 +122,10 @@
 
     <!-- HERO -->
     <div class="hero">
-      <h1>Block bad pull requests.<br/>Automatically.</h1>
+      <h1>Enforce rules on every pull request.<br/>Automatically.</h1>
 
       <p>
-        Manthan OS evaluates pull requests against defined rules and prevents merges when those rules fail.
+        Manthan OS evaluates pull requests using decision contracts and blocks merges when defined constraints are not satisfied.
       </p>
 
       <p><strong>Deterministic. Enforceable. Auditable.</strong></p>
@@ -145,14 +144,15 @@
       <h2>Pull request checks are not enough</h2>
 
       <p>
-        Most tools run checks and show results. They rely on humans to enforce decisions.
-        This leads to inconsistency, missed issues, and broken standards.
+        Most tools run checks and show results. They rely on humans to enforce decisions,
+        leading to inconsistency, missed issues, and broken standards.
       </p>
 
       <h2>Manthan OS enforces decisions</h2>
 
       <p>
-        Every pull request is evaluated using rules. Failures automatically block merges.
+        Every pull request is evaluated against defined contracts.
+        If constraints are not satisfied, the merge is automatically blocked.
         No ambiguity. No drift.
       </p>
     </div>
@@ -161,7 +161,7 @@
     <div class="section">
       <h2>Example</h2>
 
-      <p><strong>Rule:</strong> PR must include test updates</p>
+      <p><strong>Contract:</strong> Require test updates</p>
       <p><strong>Pull Request:</strong> src/api.js changed, no tests</p>
       <p><strong>Result:</strong> FAIL</p>
       <p><strong>Reason:</strong> No test files modified</p>
@@ -173,11 +173,12 @@
       <h2>How it works</h2>
 
       <div class="code">
-        Pull Request -> Webhook -> Manthan -> Decision -> Status Check -> Blocked / Allowed
+        Pull Request -> Webhook -> Manthan -> Contract Evaluation -> Decision -> Status Check -> Blocked / Allowed
       </div>
 
       <p>
-        Manthan evaluates pull requests using contracts and enforces results via GitHub status checks.
+        Manthan evaluates code changes against contracts that define constraints relative to the existing codebase,
+        and enforces the result using GitHub status checks.
       </p>
     </div>
 
@@ -192,6 +193,10 @@
   "onFail": "reject"
 }
       </div>
+
+      <p>
+        Contracts define the intent and constraints that pull requests must satisfy.
+      </p>
     </div>
 
     <!-- FEATURES -->
@@ -199,9 +204,10 @@
       <h2>Features</h2>
 
       <p><strong>Deterministic decisions:</strong> Same input -> same output</p>
-      <p><strong>Merge enforcement:</strong> Failures block merges</p>
-      <p><strong>Contract-based rules:</strong> Define once, apply everywhere</p>
-      <p><strong>Clear decision reports:</strong> Output directly in PRs</p>
+      <p><strong>Merge enforcement:</strong> Failures block merges automatically</p>
+      <p><strong>Contract-based rules:</strong> Define once, apply consistently</p>
+      <p><strong>Constraint validation:</strong> Ensure code respects system rules</p>
+      <p><strong>Clear decision reports:</strong> Output directly in pull requests</p>
     </div>
 
     <!-- SECURITY -->
