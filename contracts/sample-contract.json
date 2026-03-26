@@ -1,0 +1,8 @@
+{
+  "name": "require-tests",
+  "intent": "Ensure test coverage for code changes",
+  "inputs": ["changed_files"],
+  "rule": "test_files_changed == true",
+  "onFail": "reject",
+  "message": "No test files modified"
+}

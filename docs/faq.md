@@ -26,5 +26,19 @@ Yes.
 
 No.
 
-"@ | Set-Content docs/faq.md
+
+
+\## What happens when a rule fails?
+
+
+
+\- A decision report is posted on the PR  
+
+\- The `manthan/decision` status check is set to failed  
+
+\- GitHub blocks the merge automatically  
+
+
+
+No manual intervention required.
 
