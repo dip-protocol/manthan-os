@@ -64,6 +64,7 @@
       font-family: monospace;
       margin-top: 15px;
       color: #9ef;
+      overflow-x: auto;
     }
 
     .section {
@@ -74,6 +75,44 @@
       margin-top: 80px;
       opacity: 0.6;
       font-size: 14px;
+    }
+
+    .links a {
+      color: #aaa;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+
+    .links a:hover {
+      color: #fff;
+    }
+
+    /* 🔥 RESPONSIVE FIX */
+    @media (max-width: 600px) {
+
+      .container {
+        padding: 40px 16px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .btn {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -92,7 +131,7 @@
 
       <p><strong>Deterministic. Enforceable. Auditable.</strong></p>
 
-      <a class="btn" href="https://github.com/marketplace" target="_blank">
+      <a class="btn" href="https://github.com/marketplace/manthan-os" target="_blank">
         Install on GitHub
       </a>
 
@@ -178,7 +217,7 @@
     <div class="section">
       <h2>Get started</h2>
 
-      <a class="btn" href="https://github.com/marketplace" target="_blank">
+      <a class="btn" href="https://github.com/marketplace/manthan-os" target="_blank">
         Install on GitHub
       </a>
     </div>
@@ -188,6 +227,12 @@
       <p>
         Manthan OS — Decisions should not be suggestions. They should be enforced.
       </p>
+
+      <div class="links">
+        <a href="https://billowy-witch-aab.notion.site/Privacy-Policy-for-Manthan-32e125d4a6f4802e8e4ad441430d8c78" target="_blank">Privacy Policy</a>
+        <a href="https://billowy-witch-aab.notion.site/Terms-of-Service-for-Manthan-32e125d4a6f48087ac2dcae394cbb12a" target="_blank">Terms</a>
+        <a href="https://github.com/dip-protocol/manthan-os" target="_blank">GitHub</a>
+      </div>
     </div>
 
   </div>
