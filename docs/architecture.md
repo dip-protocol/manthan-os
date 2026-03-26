@@ -1,4 +1,6 @@
-\# 🧭 Architecture
+@"
+
+\# Architecture
 
 
 
@@ -6,75 +8,79 @@ Manthan OS is a deterministic decision engine that integrates with GitHub via we
 
 
 
-\---
+\## System Flow
 
 
 
-\## 🔄 System Flow
+Pull Request -> GitHub Webhook -> Manthan Engine -> Decision -> Status Check -> Merge Allowed or Blocked
 
 
 
-```text
+\## Components
 
-Pull Request → GitHub Webhook → Manthan Engine → Decision → Status Check → Merge Allowed / Blocked
 
-⚙️ Components
 
 1\. GitHub App
 
-Receives webhook events (pull\_request, push)
+\- Receives webhook events
 
-Authenticates using JWT and installation tokens
+\- Authenticates using JWT and installation tokens
+
+
 
 2\. Webhook Handler
 
-Validates incoming GitHub events
+\- Validates incoming events
 
-Ensures idempotent processing (no duplicate decisions)
+\- Ensures idempotent processing
+
+
 
 3\. Decision Engine
 
-Evaluates pull requests using predefined contracts
+\- Evaluates pull requests using contracts
 
-Produces deterministic decisions (approve / reject)
+\- Produces pass or fail decisions
+
+
 
 4\. Enforcement Layer
 
-Posts structured decision reports on pull requests
+\- Posts results on pull requests
 
-Sets commit status checks (manthan/decision)
-
-5\. GitHub Branch Protection
-
-Requires status checks to pass before merging
-
-Blocks merges when decisions fail
-
-🔒 Security Model
-
-GitHub App authentication using signed JWT
-
-Installation tokens used for scoped access
-
-HTTPS-only communication
-
-No persistent storage of sensitive user data
-
-🧠 Determinism Principle
+\- Sets commit status checks
 
 
 
-Manthan OS guarantees:
+5\. Branch Protection
+
+\- Blocks merge if checks fail
 
 
 
-Same input → same output
-
-No runtime drift
-
-No probabilistic behavior
+\## Security
 
 
 
-This ensures consistency and auditability across all pull requests.
+\- JWT authentication
+
+\- Scoped installation tokens
+
+\- HTTPS communication
+
+\- No storage of sensitive data
+
+
+
+\## Determinism
+
+
+
+\- Same input -> same output
+
+\- No runtime drift
+
+\- No randomness
+
+"@ | Set-Content docs/architecture.md
 
