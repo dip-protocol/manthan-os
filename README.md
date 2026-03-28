@@ -7,7 +7,7 @@
 ![Deterministic](https://img.shields.io/badge/decisions-deterministic-black)
 ![Enforcement](https://img.shields.io/badge/enforcement-enabled-success)
 
-**Block pull requests that violate your rules.**
+**Block pull requests that violate your rules.** bvb
 
 Manthan OS evaluates pull requests against defined rules and prevents merges when those rules fail.
 
